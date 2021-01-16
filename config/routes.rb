@@ -4,9 +4,11 @@ Rails.application.routes.draw do
   root 'pages#index'
   get 'pages/help'
   
-  resources :users
-  
   get '/login',  to: 'sessions#new'
   post  '/login',  to: 'sessions#new'
   delete '/login',  to: 'sessions#new'
+  
+   resources :users
+   resources :topics
+  
 end

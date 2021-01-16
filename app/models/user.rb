@@ -6,4 +6,6 @@ class User < ApplicationRecord
 validates :password, presence: true, length: { in: 8..32 }, format: { with: VALID_PASSWORD_REGEX}
   
   has_secure_password
-  end
+  
+  has_many :topics
+end
