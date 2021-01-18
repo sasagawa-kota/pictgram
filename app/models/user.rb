@@ -8,4 +8,5 @@ validates :password, presence: true, length: { in: 8..32 }, format: { with: VALI
   has_secure_password
   
   has_many :topics
+  has_many :favorites
 end

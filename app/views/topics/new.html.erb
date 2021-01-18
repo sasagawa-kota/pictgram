@@ -14,7 +14,9 @@
            <%= f.text_area :description, class: 'form-control' %>
          </div>
          
+         <% if logged_in? %>
          <%= f.submit '投稿', class: 'btn btn-block' %>
+         <% end %>
          
         <% end %>
       </div>
