@@ -72,3 +72,5 @@ gem 'jquery-rails'
 gem 'bcrypt'
 
 gem "carrierwave"
+
+gem 'font-awesome-sass'
