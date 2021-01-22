@@ -1,4 +1,7 @@
 class CommentsController < ApplicationController
+  def index
+    @comment = Comment.all
+  end
   
   def new
     @topic = Topic.find_by(params[:topics_id])

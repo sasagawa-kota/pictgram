@@ -18,11 +18,17 @@
               <% end %> 
             <% end %>
             <%= topic.favorite_users.count %>
-           <%= image_tag 'icons/comment.png', class: 'topic-index-icon' %>
+            <%= link_to image_tag('icons/comment.png', class: 'topic-index-icon'),  comments_path(topic_id: topic.id) %>
            <p class="topic-text">
              <%= topic.description %>
            </p>
-         </div>
+           <h1 class = "comment-author">コメント</h1>
+           <%= @comment.each do |comment| %>
+             <p class = "comment-text">
+               <%= comment.content %>
+             </p>
+           <% end %>
+        </div> 
        </div>
      </div>
     <% end %>
