@@ -23,10 +23,10 @@
              <%= topic.description %>
            </p>
            <h1 class = "comment-author">コメント</h1>
-           <%= @comment.each do |comment| %>
-             <p class = "comment-text">
-               <%= comment.content %>
-             </p>
+           <%= @topic.comments.each do |comment| %>
+             <div>
+               <%= comment.body %>
+             </div>
            <% end %>
         </div> 
        </div>
