@@ -1,6 +1,6 @@
 class TopicsController < ApplicationController
   def index
-    @topic =Topic.all.includes(:favorite_users)
+    @topics =Topic.all.includes(:favorite_users)
   end
   
   
